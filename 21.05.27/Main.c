@@ -87,7 +87,7 @@ int main()
 	printf 와 마찬가지로 입력받을 데이터에 맞는 서식문자를 사용하여야 하며
 	마찬가지로, 입력된 데이터를 받을 변수 역시 데이터에 맞는 자료형을 가진 변수로 넣어줘야 한다.
 	또한 변수 앞에 반드시 & 를 붙여줘야 한다.
-	
+
 	printf("입력한 숫자는 %d 입니다.\n", i);
 	*/
 
@@ -130,30 +130,48 @@ int main()
 								나이 : 32살
 	*/
 
-	int age;
-	
-	printf("나이를 입력하세요.\n");
-	scanf(" %d", &age);
-	//scanf의 서식문자 부분에서 %의 앞을 한칸만 띄우도록 하며 scanf의 문장에서는 띄어쓰기, 서식문자 이외에는 아무것도 사용할수 없다.
-	printf("\n나이는 %d살입니다.\n\n", age);
-	
-	int month;
-	int day;
+	//int age;
 
-	printf("월, 일을 순서대로 입력하세요.\n");
-	scanf(" %d %d", &month, &day);
-	printf("\n%d월 %d일\n\n", month, day);
+	//printf("나이를 입력하세요.\n");
+	//scanf(" %d", &age);
+	////scanf의 서식문자 부분에서 %의 앞을 한칸만 띄우도록 하며 scanf의 문장에서는 띄어쓰기, 서식문자 이외에는 아무것도 사용할수 없다.
+	//printf("\n나이는 %d살입니다.\n\n", age);
 
-	printf("일, 월을 순서대로 입력하세요.\n");
-	scanf(" %d %d", &day, &month);
-	printf("\n%d월 %d일\n\n", month, day);
+	//int month;
+	//int day;
 
-	float length;
-	float weight;
+	//printf("월, 일을 순서대로 입력하세요.\n");
+	//scanf(" %d %d", &month, &day);
+	//printf("\n%d월 %d일\n\n", month, day);
 
-	printf("나이, 키, 몸무게를 순서대로 입력하세요.\n");
-	scanf(" %d %f %f", &age, &length, &weight);
-	printf("\n키 : %.1fcm\n몸무게 : %.1f\n나이 : %d살\n", length, weight, age);
+	//printf("일, 월을 순서대로 입력하세요.\n");
+	//scanf(" %d %d", &day, &month);
+	//printf("\n%d월 %d일\n\n", month, day);
 
-	return 0; 
+	//float height;
+	//float weight;
+
+	//printf("나이, 키, 몸무게를 순서대로 입력하세요.\n");
+	//scanf(" %d %f %f", &age, &height, &weight);
+	//printf("\n키 : %.1fcm\n몸무게 : %.1fKg\n나이 : %d살\n", height, weight, age);
+
+	/*
+	숫자 2개를 입력받아서 입력받은 두숫자의 합, 차 , 곱 나누기의 결과를 출력해보자.
+	입력받는 숫자는 실수를 사용한다.
+	*/
+
+	float a1;
+	float a2;
+
+	printf("숫자 두개를 입력하세요.\n");
+	scanf(" %f %f", &a1, &a2);
+
+	printf("\n%.1f + %.1f = %.1f\n\n", a1, a2, a1 + a2);
+	printf("\n%.1f - %.1f = %.1f\n\n", a1, a2, a1 - a2);
+	printf("\n%.1f x %.1f = %.1f\n\n", a1, a2, a1 * a2);
+	printf("\n%.1f / %.1f = %.1f\n\n", a1, a2, a1 / a2);
+
+
+
+	return 0;
 }
