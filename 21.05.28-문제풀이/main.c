@@ -36,7 +36,7 @@ menu:
 		int i;
 		printf("숫자를 입력하세요.\n");
 		scanf(" %d", &i);
-		switch (i &= 7 == 0)
+		switch (i % 7 == 0)
 		{
 		case 0:
 			printf("7의 배수 입니다.\n");
@@ -177,7 +177,7 @@ menu:
 
 		printf("숫자를 두개 입력해 주세요.\n");
 		scanf(" %d %d", &input, &input2);
-		switch (input &= input2 == 0)
+		switch (input % input2 == 0)
 		{
 		case 0:
 			printf("%d는 %d의 배수 입니다.\n", input, input2);
