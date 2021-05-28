@@ -291,7 +291,7 @@ menu:
 		}
 		else
 		{
-			printf("잘못입력하셨습니다. 다시입력해주세요.\n");
+			printf("잘못입력하셨습니다. 다시 입력해주세요.\n");
 			goto firstScene;
 		}
 	}
