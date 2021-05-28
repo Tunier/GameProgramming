@@ -99,12 +99,12 @@ menu:
 	{
 		//	5. 숫자 3개를 입력받아 3개중에 가장 큰 숫자, 작은 숫자를 출력하기
 		int input, input2, input3;
-		int biggest = 5;
+		int biggest;
 		int least;
 
 		printf("숫자를 세개 입력해 주세요.\n");
 		scanf(" %d %d %d", &input, &input2, &input3);
-		// 3 5 2
+		
 		if (input >= input2)
 		{
 			if (input >= input3)
@@ -151,8 +151,10 @@ menu:
 	{
 		//	6. 숫자 3개를 입력받아서 평균치가 60을 넘으면(이상이면) 합격 넘지 못하면 불합격이라고 출력하기		
 		int input, input2, input3;
+		
 		printf("점수를 세개 입력해 주세요.\n");
 		scanf(" %d %d %d", &input, &input2, &input3);
+		
 		int average = (input + input2 + input3) / 3;
 
 		if (average >= 60)
@@ -169,7 +171,7 @@ menu:
 
 	else if (menu == 7)
 	{
-		// 1. 두개의 숫자를 입력받은 뒤 첫번째 입력한 숫자가 두번째 입력한 숫자의	배수인지 출력하라(swtich문 사용)
+		// 1. 두개의 숫자를 입력받은 뒤 첫번째 입력한 숫자가 두번째 입력한 숫자의	배수인지 출력하라.(swtich문 사용)
 		int input;
 		int input2;
 
@@ -266,7 +268,7 @@ menu:
 		int i;
 		float won, dollor;
 
-	firstScean:
+	firstScene:
 		printf("원화를 달러로 환전하시려면 1, 달러를 원화로 환전하시려면 2를 입력해주세요.\n");
 		printf("현재 환율은 1달러에 1,115.70원 입니다.\n");
 		scanf(" %d", &i);
@@ -290,7 +292,7 @@ menu:
 		else
 		{
 			printf("잘못입력하셨습니다. 다시입력해주세요.\n");
-			goto firstScean;
+			goto firstScene;
 		}
 	}
 	else
