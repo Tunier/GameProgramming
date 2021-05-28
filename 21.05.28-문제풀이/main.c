@@ -7,7 +7,7 @@ int main()
 {
 	int menu = 0;
 	printf("메뉴를 선택하세요.\n");
-menu:
+MenuScene:
 	printf("1. 연습 1번문제\n2. 연습 2번문제\n3. 연습 3번문제\n4. 연습 4번문제\n5. 연습 5번문제\n6. 연습 6번문제\n");
 	printf("7. 응용 1번문제\n8. 응용 2번 문제\n9. 응용 3번 문제\n10. 응용 4번 문제\n11. 응용 5번문제\n");
 	scanf(" %d", &menu);
@@ -298,7 +298,7 @@ menu:
 	else
 	{
 		printf("잘못입력하셨습니다. 다시 입력해주세요.");
-		goto menu;
+		goto MenuScene;
 	}
 
 	return 0;
