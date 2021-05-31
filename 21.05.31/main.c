@@ -412,8 +412,7 @@ int main()
 				for (int j = 1; j <= 9; j++)
 				{
 					printf_s("%d x %d = %d\n", i, j, (i * j));
-				}
-				j = 1;
+				}				
 				printf_s("\n");
 			}
 			printf_s("\n");
@@ -424,8 +423,7 @@ int main()
 				for (int j = 9; j >= 2; j--)
 				{
 					printf_s("%d x %d = %d\n", i, j, (i * j));
-				}
-				j = 9;
+				}				
 				printf_s("\n");
 			}
 
@@ -435,8 +433,7 @@ int main()
 				for (int j = 2; j <= 9; j++)
 				{
 					printf_s("%d x %d = %d\n", i, j, (i * j));
-				}
-				j = 2;
+				}				
 				printf_s("\n");
 			}
 		}

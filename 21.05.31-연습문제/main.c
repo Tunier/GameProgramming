@@ -8,7 +8,7 @@ int main()
 	while (1)
 	{
 		int menu = 0;
-		printf("1),2),3),4),5),6),0)종료\n");
+		printf("1),2),3),4),5),6),7),0)종료\n");
 		scanf(" %d", &menu);
 
 		if (menu == 1)
@@ -169,6 +169,202 @@ int main()
 				printf("\n");
 			}
 		}
+		if (menu == 7)
+		{
+			printf_s("1\n");
+
+			for (int i = 1; i <= 5; i++)
+			{
+				for (int j = 1; j <= 5; j++)
+				{
+					if (i < j)
+						printf_s(" ");
+					else
+						printf_s("*");
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+			printf_s("2\n");
+
+			for (int i = 5; i >= 1; i--)
+			{
+				for (int j = 1; j <= 5; j++)
+				{
+					if (i >= j)
+						printf_s("*");
+					else
+						printf_s(" ");
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+			printf_s("3\n");
+
+			for (int i = 5; i > 0; i--)
+			{
+				for (int j = 1; j <= 5; j++)
+				{
+					if (i <= j)
+						printf_s("*");
+					else
+						printf_s(" ");
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+			printf_s("4\n");
+
+			for (int i = 1; i <= 5; i++)
+			{
+				for (int j = 1; j <= 5; j++)
+				{
+					if (i <= j)
+						printf_s("*");
+					else
+						printf_s(" ");
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+			printf_s("5\n");
+
+			int i;
+			int height = 5;
+			int length = 9;
+			int center = height;
+			
+			for (height = 5; height >= 1; height--)
+			{
+				for (int i = 1; i < 5; i++)
+				{
+					if (height <= i)
+					{
+						printf("*");
+					}
+					else
+					{
+						printf(" ");
+					}
+				}
+				for (int i = 5; i <= 9; i++)
+				{
+					if (i > length - height + 1)
+					{
+						printf(" ");
+					}
+					else
+					{
+						printf("*");
+					}
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+			printf_s("6\n");
+			
+			i;
+			height = 5;
+			length = 9;
+			center = 5;
+
+			for (height = 5; height >= 1; height--)
+			{
+				for (int i = 5; i > 1; i--)
+				{
+					if (height >= i)
+					{
+						printf("*");
+					}
+					else
+					{
+						printf(" ");
+					}
+				}
+				for (int i = 9; i >= 5; i--)
+				{
+					if (i < length - height + 1)
+					{
+						printf(" ");
+					}
+					else
+					{
+						printf("*");
+					}
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+			printf_s("7\n");
+
+			i;
+			height = 10;
+			length = 9;
+			center = 5;
+
+			for (height = 10; height >= 1; height--)
+			{
+				if (height > 5)
+				{
+					for (int i = 1; i < 5; i++)
+					{
+						if (height <= i)
+						{
+							printf("*");
+						}
+						else
+						{
+							printf(" ");
+						}
+					}
+					for (int i = 5; i <= 9; i++)
+					{
+						if (i > length - height + 1)
+						{
+							printf(" ");
+						}
+						else
+						{
+							printf("*");
+						}
+					}
+				}
+				else 
+				{
+					for (int i = 5; i > 1; i--)
+					{
+						if (height >= i)
+						{
+							printf("*");
+						}
+						else
+						{
+							printf(" ");
+						}
+					}
+					for (int i = 9; i >= 5; i--)
+					{
+						if (i < length - height + 1)
+						{
+							printf(" ");
+						}
+						else
+						{
+							printf("*");
+						}
+					}
+				}
+				printf_s("\n");
+			}
+			printf_s("\n");
+
+		}
 		if (menu == 0)
 		{
 			return 0;
@@ -176,3 +372,28 @@ int main()
 	}
 	return 0;
 }
+
+/*
+		 *
+		***
+	   *****
+*******************
+  ***************
+	***********     // 넓이 19 높이 11
+  ***************
+*******************
+	   *****
+		***
+		 *
+
+
+		 *
+		***
+  ***************
+	***********
+	  *******
+	***********
+  ***************
+		***
+		 *
+*/
