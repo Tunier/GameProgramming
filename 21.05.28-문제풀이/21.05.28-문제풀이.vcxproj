@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{195cfc47-5013-4464-ac4d-6f4746fca1c4}</ProjectGuid>
+    <ProjectGuid>{d1293772-f79d-4210-bbca-8b10528b0d42}</ProjectGuid>
     <RootNamespace>My210528문제풀이</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
