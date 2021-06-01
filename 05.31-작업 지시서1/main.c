@@ -8,7 +8,7 @@ int main()
 	printf("2개의 숫자 입력 : ");
 	scanf(" %d %d", &insert, &insert2);
 
-	if (((insert >= 1) && (insert <= 9)) && ((insert2 >= 1) && (insert2 <= 9)))
+	if ((insert >= 1) && (insert <= 9) && (insert2 >= 1) && (insert2 <= 9))
 	{
 		if (insert >= insert2)
 		{
