@@ -18,7 +18,6 @@ int main()
 	int strike = 0, ball = 0;
 	int life = 7;
 
-
 	printf("숫자야구게임\n\n");
 	/*
 	printf("정답으로 사용할 숫자 3개를 입력해주세요.\n");
