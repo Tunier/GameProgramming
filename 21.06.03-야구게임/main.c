@@ -49,9 +49,20 @@ int main()
 	
 	srand(time(NULL)); // 랜덤의 규칙성을 제거하는 함수. 이 함수가 없으면 실행시마다 항상 같은 난수가 나온다. 사용하기위해서는 #include <time.h> 필요.
 	for (int i = 0; i < 3; i++)
-		answer[i] = rand() % 9 + 1;	
-	// 1~9의 랜덤한 숫자가 anser[i]에 들어감.
-	// for문으로 3회 반복되므로 3개가 다 들어감.
+	{
+		answer[i] = rand() % 9 + 1;
+		// 1~9의 랜덤한 숫자가 anser[i]에 들어감.
+		// for문으로 3회 반복되므로 3개가 다 들어감.
+		if (i == 2)
+		{
+			if ((answer[0] != answer[1]) && (answer[0] != answer[2]) && (answer[1] != answer[2])) {}
+			else
+				i -= 3;
+		}
+		// i가 2인경우(숫자 3회 다 넣은경우), 숫자 3개 모두 비교하여 서로 같지 않은경우에 for문을 끝냄.
+		// 같은 숫자가 있는경우 다시 랜덤을 돌려서 모두 다른 숫자일 경우에만 for문 종료.
+	}
+	
 
 	while (1)
 	{
@@ -61,6 +72,7 @@ int main()
 		if (life > 0)
 		{
 			printf("life는 %d개 입니다.\n", life);
+			printf("정답인 숫자 3개는 모두 다른 숫자입니다.\n");
 			printf("숫자 3개를 입력해주세요.\n");
 
 			/*
