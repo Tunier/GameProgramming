@@ -1,5 +1,5 @@
 #define	_CRT_SECURE_NO_WARNINGS
-#define DEBUG_MODE 0
+#define DEBUG_MODE 0 // 디버그모드
 
 #include <stdio.h>
 #include <stdlib.h>
