@@ -61,7 +61,7 @@ int main()
 				{
 					if (answer[i] != answer[j]) {}
 					else
-						i -= 3;
+						i -= 2;
 				}
 			}
 
