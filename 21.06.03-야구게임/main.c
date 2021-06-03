@@ -24,9 +24,12 @@ int main()
 	printf("정답으로 사용할 숫자 3개를 입력해주세요.\n");
 	for (int i = 0; i < 3; i++)
 		scanf(" %d", &answer[i]);
+	// 정답을 가장 기본적으로 아무 숫자나 3개를 입력받는법.
+	// 음수나 10이 넘어도 받아주어서 맞출수 없는 정답이 될수있다.
 	*/
 
-	/*printf("정답으로 사용할 숫자 3개를 입력해주세요.\n");
+	/*
+	printf("정답으로 사용할 숫자 3개를 입력해주세요.\n");
 
 	for (int i = 0; i < 3; i++)
 	{
@@ -37,13 +40,18 @@ int main()
 		else
 		{
 			printf("1 ~ 9 사이의 숫자를 입력해야합니다. 다시입력해주세요.\n");
-			i--;
+			i--; // 다시 입력해야 하므로 for문이 돌아가야할 횟수를 1회 늘려줌.
 		}
-	}*/
-
-	srand(time(NULL));
+	}
+	// 정답을 아무 숫자나 입력받고, 1~9 사이의 숫자일 경우에만 해당 answer[i]에 넣어준다.
+	// 그 외의 경우에는 다시 입력하게 만든다.
+	*/
+	
+	srand(time(NULL)); // 랜덤의 규칙성을 제거하는 함수. 이 함수가 없으면 실행시마다 항상 같은 난수가 나온다. 사용하기위해서는 #include <time.h> 필요.
 	for (int i = 0; i < 3; i++)
-		answer[i] = rand() % 9 + 1;
+		answer[i] = rand() % 9 + 1;	
+	// 1~9의 랜덤한 숫자가 anser[i]에 들어감.
+	// for문으로 3회 반복되므로 3개가 다 들어감.
 
 	while (1)
 	{
@@ -55,8 +63,11 @@ int main()
 			printf("life는 %d개 입니다.\n", life);
 			printf("숫자 3개를 입력해주세요.\n");
 
-			/*for (int i = 0; i < 3; i++)
-				scanf(" %d", &insert[i]);*/
+			/*
+			for (int i = 0; i < 3; i++)
+				scanf(" %d", &insert[i]);
+			// 정답의 경우와 같이 기본적으로 입력값을 받아서 insert[i](정답을 맞추려고 하는 번호)에 넣어준다.
+			*/
 
 			for (int i = 0; i < 3; i++)
 			{
@@ -75,7 +86,6 @@ int main()
 			{
 				if (insert[i] == answer[i])
 					strike++;
-
 				else if (insert[i] == answer[0] || insert[i] == answer[1] || insert[i] == answer[2])
 					ball++;
 			}
@@ -83,11 +93,12 @@ int main()
 			if (strike == 3)
 			{
 				printf("정답입니다.\n");
-				break;
+				break; // if문을 탈출하는것이 아니라 가장 가까운 반복문 하나를 탈출함.
 			}
 			else
 			{
-				life--;
+				life--; // 틀린경우에만 라이프가 감소. 
+						// 라이프가 감소해서 출력해야하므로 남은 라이프가 출력되기전에 먼저 감소하도록 첫줄에 작성.
 				printf("life가 감소했습니다. 남은 life는 %d개 입니다.\n", life);
 				printf("%d %d %d 는 %d스트라이크 %d볼 입니다.\n\n", insert[0], insert[1], insert[2], strike, ball);
 			}
