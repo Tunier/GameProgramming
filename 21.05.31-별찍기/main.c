@@ -50,7 +50,7 @@ int main()
 	*/
 	for (int i = 0; i < 5; i++)
 	{
-		for (int j = 0; j < 5 - i; j++)
+		for (int j = 0; j < 4 - i; j++)
 		{
 			printf(" ");
 		}
@@ -169,11 +169,11 @@ int main()
 
 	printf("8)\n");
 	/*
-		*       *
-		 *     *
-		  *   *
-		   * *
-			*
+	*       *
+	 *     *
+	  *   *
+	   * *
+		*
 	*/
 	for (int i = 0; i < 5; i++)
 	{
