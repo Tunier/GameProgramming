@@ -12,9 +12,9 @@ int main()
 		저장된 숫자와 입력된 숫자가 저장된 두 배열을 비교해서 볼과 스트라이크의 갯수를 카운트한다.
 	*/
 
-	int input;
-	int insert[3];
-	int answer[3];
+	int input; // 입력하는 값.
+	int insert[3]; // 정답을 확인하기 위해 입력한값.
+	int answer[3]; // 정답.
 	int strike = 0, ball = 0;
 	int life = 7;
 
