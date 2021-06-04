@@ -148,6 +148,7 @@ char myFunc3()
 	// 프로그램에서 자동적으로 기본값에 해당하는 값을 리턴해주기도 한다.
 	// 프로그램언어나 툴에 따라서는 반환값이 없으면 에러를 내는 경우가 존재한다.
 	// 때문에 생략하기 보다는 무조건 함수에는 리턴값을 넣어줘야한다.
+	return ' ';
 }
 
 int myFunc4()
@@ -156,6 +157,7 @@ int myFunc4()
 	// 리턴이 실행된 시점에서 함수를 실행한 목적을 달성했다고 보기 때문에
 	// 리턴 이후의 코드는 실행이 되지 않고 함수 자체가 종료된다.
 	// 따라서 리턴은 함수를 종료시키는 역할을 의미하기도 한다.
+	return 0;
 }
 
 int myFunc5()
@@ -176,7 +178,7 @@ int myFunc5()
 
 	return 0;
 }
-// 더한값만 리턴함
+// 더한값을 리턴함(input, input2, input3)
 int add2()
 {
 	printf("더해줄 숫자 2개를 입력하세요.\n");
@@ -186,7 +188,7 @@ int add2()
 
 	return i + j;
 }
-// 뺀값만 리턴함
+// 뺀값을 리턴함
 int sub2()
 {
 	printf("빼줄 숫자 2개를 입력하세요.\n");
@@ -197,7 +199,7 @@ int sub2()
 
 	return i - j;
 }
-// 나눈값만 리턴함
+// 나눈값을 리턴함
 int div2()
 {
 	printf("나눠줄 숫자 2개를 입력하세요.\n");
@@ -213,7 +215,7 @@ int div2()
 
 	return i / j;
 }
-// 곱한값만 리턴함
+// 곱한값을 리턴함
 int mul2()
 {
 	printf("곱해줄 숫자 2개를 입력하세요.\n");
@@ -263,7 +265,153 @@ void myFunc6(int x, int y, float f, char c)
 	printf("x : %d y : %d f : %.1f c : %c", x, y, f, c);
 }
 
-int main()
+/*
+	1. 숫자를 입력하면 해당숫자의 홀/짝을 출력하는 함수를 만들어보자.
+	   숫자는 매개변수를 통해 받는다.
+*/
+void Odd_Even(int _i)
+{
+	if (_i % 2 == 0)
+		printf("%d은 짝수입니다.\n", _i);
+	else
+		printf("%d은 홀수입니다.\n", _i);
+}
+
+/*
+	1-2. 숫자를 입력하면 해당 숫자의 음수/양수를 출력하는 함수를 만들어보자.
+		 숫자는 매개변수를 통해 받는다.
+*/
+void Ne_Po(int _i)
+{
+	if (_i > 0)
+		printf("%d은 양수입니다.\n", _i);
+	else if (_i < 0)
+		printf("%d은 음수입니다.\n", _i);
+	else
+		printf("%d은 0입니다.\n", _i);
+}
+
+/*
+	2-1. 매개변수로 숫자를 2개 입력받아서 둘중 더 큰 숫자를 반환하는 함수를 만들자.
+		 두 값이 같으면 둘중 아무나 반환한다.
+		 반환된 값은 함수를 호출한 곳에서 출력하여 결과값이 화면에 보일수 있도록 작성한다.
+*/
+int Bigger(int _i, int _j)
+{
+	if (_i >= _j)
+		return _i;
+	else
+		return _j;
+}
+// Bigger함수 변형
+int Bigger2(int _i, int _j)
+{
+	int result;
+
+	if (_i >= _j)
+		result = _i;
+	else
+		result = _j;
+
+	return result;
+}
+
+/*
+	2-2. 매개변수로 숫자를 3개 입력받아서 셋중 더 작은 숫자를 반환하는 함수를 만들자.
+		 가장 작은 숫자가 둘 이상이라면 둘중 아무나 반환한다.
+		 반환된 값은 함수를 호출한 곳에서 출력하여 결과값이 화면에 보일수 있도록 작성한다.
+*/
+int Minimum(int _i, int _j, int _k)
+{
+	int result;
+
+	if (_i < _j)
+		result = _i;
+	else
+		result = _j;
+
+	if (_k < result)
+		result = _k;
+
+	return result;
+}
+
+/*
+	3-1. 매개변수로 점수를 3개 입력받아서 점수의 평균을 반환하는 함수를 만들자.
+		 점수는 정수형으로 입력 받으며 평균은 실수형으로 계산한다.
+*/
+float Average(int _i, int _j, int _k)
+{
+	return (float)(_i + _j + _k) / 3;
+	// 정수끼리 계산이라 형 변환 연산자를 이용해 플롯형으로 치환해줘야함.
+}
+
+/*
+	3-2. 매개변수로 점수를 3개 정수로 입력받아서 점수의 평균을 실수형으로 계산하여
+		 점수의 평균값에 따라 학점을 반환하는 함수를 만들자.
+		 90>= A, 80>= B, 70>= C, 60>= D, 나머지 F
+*/
+char Credit(int _i, int _j, int _k)
+{
+	float average = Average(_i, _j, _k);
+	char result;
+
+	if (average >= 90)
+		result = 'A';
+	else if (average >= 80)
+		result = 'B';
+	else if (average >= 70)
+		result = 'C';
+	else if (average >= 60)
+		result = 'D';
+	else
+		result = 'F';
+
+	return result;
+}
+
+// 배열을 함수의 매개변수로 사용하는 경우
+void printAry(int ary[10])
+{
+	for (int i = 0; i < 10; i++)
+		printf("ary[%d] : %d\n", i, ary[i]);
+}
+
+void printAry2(int ary[10], int length)
+{
+	// 배열을 출력하는 함수이지만 배열 전체가 입력되지 않는 경우도 있기 때문에
+	// 배열 몇번까지 출력을 해야하는지 사용중인 배열의 길이를 추가로 입력받는다.
+	for (int i = 0; i < length; i++)
+		printf("ary[%d] : %d\n", i, ary[i]);
+}
+
+// 재귀함수
+// 함수 안에서 자기 자신을 부른다.
+void fruit(int _i)
+{
+	printf("apple%d\n",_i);
+	
+	if (_i > 3)
+		return;
+
+	fruit(_i +1);
+
+	printf("_i : %d\n", _i);
+}
+
+int facto(int _i)
+{
+	if (_i == 1)
+		return 1;
+	else
+		return _i * facto(_i - 1);
+	// 4 * facto(3) -> 3 * facto(2) -> 2 * facto(1) -> 1
+	// 1 -> 2 * 1 -> 3 * 2 * 1 -> 4 * 3 * 2 * 1
+	// 반복문과 달리 재귀함수를 사용하면
+	// 호출된 순서의 역순으로 결과가 계산되기 시작한다.
+}
+
+void amStudy()
 {
 	/*
 	// 배열
@@ -476,6 +624,102 @@ int main()
 	myFunc6(10, 77, 99.9f, 'x');
 	// 함수에서 요구하는 매개변수가 여러개인 경우
 	// 해당 매개변수를 순서대로 넣어주면 된다.
+}
+
+int main()
+{
+	// fruit(1);
+
+	facto(4);
+
+	printf("4! = %d\n", facto(4));
+
+	int input, input2, input3;
+
+	printf("1)\n\n");
+
+	printf("숫자를 입력하세요.\n");
+
+	scanf(" %d", &input);
+
+	Odd_Even(input);
+
+	//==========================================
+
+	printf("\n1-1)\n\n");
+
+	printf("숫자를 입력하세요.\n");
+
+	scanf(" %d", &input);
+
+	Ne_Po(input);
+
+	//==========================================
+
+	printf("\n2-1)\n");
+
+	printf("숫자를 2개 입력하세요.\n");
+
+	scanf(" %d %d", &input, &input2);
+
+	printf("1번(Bigger 사용) 방식\n");
+	printf("둘중 더큰 숫자는 %d입니다.\n", Bigger(input, input2));
+
+	printf("\n");
+
+	printf("2번(Bigger2 사용) 방식\n");
+	printf("둘중 더큰 숫자는 %d입니다.\n", Bigger2(input, input2));
+
+	//==========================================
+
+	printf("\n2-2)\n");
+
+	printf("숫자를 3개 입력하세요.\n");
+
+	scanf(" %d %d %d", &input, &input2, &input3);
+
+	printf("셋중 가장작은 숫자는 %d입니다.\n", Minimum(input, input2, input3));
+
+	//==========================================
+
+	printf("\n3-1)\n");
+
+	printf("점수를 3개 입력하세요.\n");
+
+	scanf(" %d %d %d", &input, &input2, &input3);
+
+	printf("평균 점수는 %.2f입니다.", Average(input, input2, input3));
+
+	//==========================================
+
+	printf("\n3-2)\n");
+
+	printf("점수를 3개 입력하세요.\n");
+
+	scanf(" %d %d %d", &input, &input2, &input3);
+
+	printf("평균 점수는 %.2f, 학점은 %c입니다.\n", Average(input, input2, input3), Credit(input, input2, input3));
+
+	//==========================================
+
+	printf("\n4)\n\n");
+
+	int ary[10] = { 1,2,3,4,5,6,7,8,9,10 };
+
+	printAry(ary);
+	// 매개변수로 배열을 사용할 때는 배열 전체를 전달해야하기때문에 인덱스없이 배열명을 그대로 함수의 매개변수로 작성하여 넣는다.
+
+	int ary2[10];
+	ary2[0] = 1;
+	ary2[1] = 2;
+	ary2[2] = 3;
+	ary2[3] = 4;
+	ary2[4] = 5;
+	printAry2(ary2, 5);
+
+	//==========================================
+
+	printf("\n4)\n\n");
 
 	return 0;
 }
