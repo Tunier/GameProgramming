@@ -14,8 +14,8 @@ int main()
 	*/
 
 	int input = 0; // 입력하는 값.
-	int insert[3] = {0}; // 정답을 확인하기 위해 입력한값.
-	int answer[3] = {0}; // 정답.
+	int insert[3]; // 정답을 확인하기 위해 입력한값.
+	int answer[3]; // 정답.
 	int strike = 0, ball = 0;
 	int Life = 7;
 
@@ -59,15 +59,18 @@ int main()
 			{
 				for (int k = j + 1; k < 3; k++)
 				{
-					if (answer[i] != answer[j]) {}
+					if (answer[j] != answer[k]) {}
 					else
 						i -= 2;
 				}
 			}
+			// 0,1번째 수 비교, 0,2번 비교후 1,2번 비교하여(전수검사) 서로 같지 않으면 패스 같으면 다시 랜덤으로 수를 넣음.
 
-			/*if ((answer[0] != answer[1]) && (answer[0] != answer[2]) && (answer[1] != answer[2])) {}
+			/*
+			if ((answer[0] != answer[1]) && (answer[0] != answer[2]) && (answer[1] != answer[2])) {}
 			else
-				i -= 2;*/
+				i -= 2;
+			*/			
 		}
 		// i가 2인경우(숫자 3회 다 넣은경우), 숫자 3개 모두 비교하여 서로 같지 않은경우에 for문을 끝냄.
 		// 같은 숫자가 있는경우 다시 랜덤을 돌려서 모두 다른 숫자일 경우에만 for문 종료.
@@ -87,7 +90,7 @@ int main()
 		if (Life > 0)
 		{
 			printf("Life : %d\n", Life);
-			
+
 			printf("숫자 3개를 입력해주세요.\n");
 
 			/*
@@ -127,7 +130,7 @@ int main()
 				Life--; // 틀린경우에만 라이프가 감소. 
 						// 라이프가 감소해서 출력해야하므로 남은 라이프가 출력되기전에 먼저 감소하도록 첫줄에 작성.
 				printf("%d %d %d 는 %d스트라이크 %d볼 입니다.\n\n", insert[0], insert[1], insert[2], strike, ball);
-				if (Life>0)
+				if (Life > 0)
 					printf("Life가 1 감소했습니다.\n\n");
 			}
 		}
