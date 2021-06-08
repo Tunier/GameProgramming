@@ -58,6 +58,5 @@ int main()
 
 	print_array(ary_jjak, jjak_count, "ary_jjak");
 
-
 	return 0;
 }
