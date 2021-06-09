@@ -76,11 +76,29 @@ int main()
 		if (i % input == 0) {}
 		else
 			printf("%d ", i);
-			
+
 	printf("\n\n");
 
 	// 8. 100 이하의 정수 중에서 3의 배수이면서 5의 배수인 숫자를 출력하라.
+	printf("8번 문제 입니다.\n");
 
+	for (int i = 1; i <= 100; i++)
+		if ((i % 3 == 0) && (i % 5 == 0))
+			printf("%d ", i);
+
+	printf("\n\n");
+
+	// 9. 숫자를 입력받아 해당 숫자의 배수를 10개 출력하라.
+	printf("9번 문제 입니다.\n");
+
+	printf("숫자를 입력해주세요.");
+
+	scanf(" %d", &input);
+
+	for (int i = 0; i < 10; i++)
+		printf("%d ", input * (i + 1));
+
+	printf("\n\n");
 
 
 
