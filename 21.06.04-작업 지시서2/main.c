@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-void print_array(int ary[10], int leagth, char name[10])
+void print_array(int ary[], int leagth, char name[])
 {
 	printf("%s¹è¿­ : ", name);
 	for (int i = 0; i < leagth; i++)
