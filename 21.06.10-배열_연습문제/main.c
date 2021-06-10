@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
+#include <string.h>
 
 
 int main()
@@ -8,6 +9,7 @@ int main()
 	int input = 0;
 	int count = 0;
 	int max, min;
+	int temp;
 
 	//// 1. 배열을 만들고 10, 20, 30, 40, 50을 배열에 넣은 뒤 이를 출력하라.
 	//printf("1번 문제 입니다.\n");
@@ -176,23 +178,86 @@ int main()
 
 	//printf("\n");
 
-	// 10. 문자열을 만들고 HelloWorld로 초기화 한 뒤 이를 출력하라.
-	printf("10번 문제 입니다.\n");
+	//// 10. 문자열을 만들고 HelloWorld로 초기화 한 뒤 이를 출력하라.
+	//printf("10번 문제 입니다.\n");
 
-	char* s = "HelloWorld";
+	//char s[64] = "HelloWorld";
 
-	printf("%s", s);
+	//printf("%s\n", s);
 
-	printf("\n");
+	//printf("\n");
 
 	// 11. 문자열을 만들고 문자열에 저장할 내용을 입력받은 뒤 이를 출력하라.
 	printf("11번 문제 입니다.\n");
 
-	char* s2 = " ";
+	char s2[64];
 
-	scanf(" %s", s2);
+	printf("문자열에 저장할 문자를 입력하세요.\n");
 
-	printf("%s", s2);
+	scanf(" %s", &s2);
+
+	printf("%s\n", s2);
+
+	printf("\n");
+
+	// 12. HelloWordl라고 저장된 문자열을 만들고 이를 거꾸로 출력하자.
+	//     저장된 문자열의 데이터는 건드리지 않는다.
+	printf("12번 문제 입니다.\n");
+
+	char s3[11] = { "HelloWorld" };
+
+	for (int i = 0; i < 11; i++)
+		printf("%c", s3[10 - i]);
+
+	printf("\n\n");
+
+	// 13. HelloWordl라고 저장된 문자열을 만들고 이를 거꾸로 '저장한 뒤' 출력하자.
+	//     저장된 문자열의 데이터를 실제로 뒤집어야 한다.  
+	printf("13번 문제 입니다.\n");
+
+	char s4[11] = { "HelloWorld" };
+
+	char s4cpy[11];
+
+	strcpy(s4cpy, s4);
+
+	for (int i = 0; i < 11; i++)
+		s4[i] = s4cpy[10 - i];
+
+	for (int i = 0; i < 11; i++)
+		printf("%c", s4[i]);
+
+	printf("\n\n");
+
+	// 14. 숫자 5개를 입력받아 이를 배열에 저장하고 가장 큰 숫자부터 차례대로 출력하라.
+	printf("14번 문제 입니다.\n");
+
+	int ary14[5] = { 0, };
+
+	printf("배열에 저장할 숫자를 5개 입력하세요.\n");
+
+	for (int i = 0; i < 5; i++)
+	{
+		scanf(" %d", &input);
+		ary14[i] = input;
+	}
+
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = i + 1; j < 5; j++)
+		{
+			if (ary14[i] <= ary14[j])
+			{
+				temp = ary14[i];
+				ary14[i] = ary14[j];
+				ary14[j] = temp;
+			}
+		}
+	}
+
+	for (int i = 0; i < 5; i++)
+		printf("%d ", ary14[i]);
+
 
 	return 0;
 }
