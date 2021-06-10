@@ -16,6 +16,14 @@ struct MyCharacter
 	char name[256];
 };
 
+typedef struct Book
+{
+	char title[256];
+	char writer[256];
+	int price;
+	int year;
+}Book;
+
 void print_struct(struct MyCharacter target)
 {
 	// 구조체도 통상적인 자료형처럼 함수의 매개변수로도 쓸수있다.
@@ -24,6 +32,31 @@ void print_struct(struct MyCharacter target)
 	printf("레벨 : %d\n", target.level);
 	printf("경험치 : %.2f\n", target.exp);
 }
+
+void print_Book(struct Book target)
+{
+	printf("책의 정보를 출력합니다.\n");
+	printf("제목 : %s\n", target.title);
+	printf("저자 : %s\n", target.writer);
+	printf("가격 : %d\n", target.price);
+	printf("출판년도 : %d\n", target.year);
+	printf("\n");
+}
+
+void search_book(struct Book books[], int size, char name[256])
+{
+	for (int i = 0; i < size; i++)
+		if (strcmp(books[i].title, name) == 0)
+		{
+			printf("찾으시는 책이 %d번에 존재합니다.\n", i);
+			break;
+		}
+		else if (strcmp(books[i].title, name) != 0 && i == size - 1)
+			printf("찾으시는 책이 존재하지 않습니다.\n");
+	// 책을 못찾은 경우 -> 마지막 책까지 전부 검사한 후에 실행됨.
+}
+
+
 
 int main()
 {
@@ -77,6 +110,58 @@ int main()
 	for (int i = 0; i < 5; i++)
 		print_struct(array[i]);
 
+	printf("MyCharactor의 크기 %d", sizeof(struct MyCharacter)); // 4 + 4 + 256 = 264
+	// 구조체의 크기(용량)은 구조체 안에 존재하는 모든 변수들의 크기의 합이다.
+
+	struct MyCharacter test = { 15,33.3f,"abc" };
+	print_struct(test);
+	// 구조체는 배열과 마찬가지로 구조체 변수를 생성할때 중괄호를 통해
+	// 구조체 내의 데이터를 일괄 초기화할 수 있다.
+	// 단, 구조체 내에서 변수를 선언한 순서에 맞게 입력해야 한다.
+
+	struct MyCharacter arrays[5] = { {1,2.2f,"a"}, {2,3.4f,"b"}, {3,5.5,"c"}, {4,5.5f,"d"}, {5,6.6f,"e"} };
+	// 구조체 배열을 일괄 초기화 할때는 배열을 초기화 하듯 중괄호 안에 데이터를 작성하는데
+	// 작성해야할 데이터가 구조체이기 때문에 다시 중괄호를 작성하여 각각의 구조체에 들어갈 데이터를 입력해준다.
+
+	/*
+		책의 정보를 저장할 구조체를 만들고
+		10권의 책을 생성해서 책의 정보를 대입해주고
+
+		숫자를 입력하면 해당 숫자에 해당하는 책의 정보를 줄력하도록 만들어보자.
+
+		책의 정보를 출력하는 것은 함수를 통해서 출력해야한다.
+
+		저장되는 책의 정보는 제목, 저자, 가격, 출판년도.
+	*/
+
+	Book books[10] = { {"A","a",1,1900}, {"B","b",2,1901}, {"C","c",3,1902}, {"D","d",4,1903}, {"E","e",5,1904}, {"F","f",6,1905},
+							{"G","g",7,1906}, {"H","h",8,1907}, {"I","i",9,1908}, {"J","j",10,1909 } };
+
+	printf("책 번호를 입력하세요.(0~9)\n");
+
+	int book_number;
+	scanf(" %d", &book_number);
+
+	print_Book(books[book_number]);
+
+
+	//=================================================================
+
+	struct Book myBook = { "AB","Tunier",24000,210610 };
+
+	struct Book* p_book = &myBook;
+	// 구조체를 포인터로 쓸때도 일반적인 변수 포인터와 마찬가지로
+	// 변수명 앞에(자료형 -구조체- 뒤에)*을 붙인다.
+
+	printf("제목 : %s\n", (*p_book).title);
+	// 구조체를 포인터로 사용할때 역참조를 하려면 역참조 연산자인 *과 구조체 포인터를 소괄호로 감싸야 한다.
+
+	printf("저자 : %s\n", p_book->writer);
+	// 구조체 포인터를 통해 구조체 내부의 데이터에 접근할때는
+	// 역참조를 사용할 필요없이 .대신에 ->를 통해서 내부 데이터에 접근하면 된다.
+
+	printf("\n");
+	search_book(books, 10, "AB");
 
 
 	return 0;
