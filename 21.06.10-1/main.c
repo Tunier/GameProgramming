@@ -162,7 +162,4 @@ int main()
 
 	printf("\n");
 	search_book(books, 10, "AB");
-
-
-	return 0;
 }
