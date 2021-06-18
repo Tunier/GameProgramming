@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Class1">
+      <UniqueIdentifier>{abfa84c4-dec5-4c29-9449-b271dc5d02f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Class2">
+      <UniqueIdentifier>{5c5fff99-d56c-419d-99a0-d2ca3aa51327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Item">
+      <UniqueIdentifier>{f61a79aa-2469-4338-9ef7-2b9531fbd770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Item\Potion">
+      <UniqueIdentifier>{e2600c33-2899-4f38-8623-3819cc45f800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Item\Potion\HpPotion">
+      <UniqueIdentifier>{9f3f3dd4-5a5b-4518-aee4-9f2668f77eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Item\Potion\MpPotion">
+      <UniqueIdentifier>{38c173b1-8b54-4849-9b72-f1c36e3d41cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Player">
+      <UniqueIdentifier>{9e87add3-561a-46f9-b6bc-42858ac63ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Item\Potion\StaminaPotion">
+      <UniqueIdentifier>{99273453-f50f-439e-8bc0-b58e790842c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hero">
+      <UniqueIdentifier>{5cb44f5c-3665-4c6e-8748-4fd514a88b41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Class1.cpp">
+      <Filter>소스 파일\Class1</Filter>
+    </ClCompile>
+    <ClCompile Include="Class2.cpp">
+      <Filter>소스 파일\Class2</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Potion.cpp">
+      <Filter>소스 파일\Item\Potion</Filter>
+    </ClCompile>
+    <ClCompile Include="HpPotion.cpp">
+      <Filter>소스 파일\Item\Potion\HpPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="MpPotion.cpp">
+      <Filter>소스 파일\Item\Potion\MpPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPlayer.cpp">
+      <Filter>소스 파일\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="StaminaPotion.cpp">
+      <Filter>소스 파일\Item\Potion\StaminaPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="CHero.cpp">
+      <Filter>소스 파일\Hero</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Class1.h">
+      <Filter>소스 파일\Class1</Filter>
+    </ClInclude>
+    <ClInclude Include="Class2.h">
+      <Filter>소스 파일\Class2</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>소스 파일\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Potion.h">
+      <Filter>소스 파일\Item\Potion</Filter>
+    </ClInclude>
+    <ClInclude Include="HpPotion.h">
+      <Filter>소스 파일\Item\Potion\HpPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="MpPotion.h">
+      <Filter>소스 파일\Item\Potion\MpPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPlayer.h">
+      <Filter>소스 파일\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="StaminaPotion.h">
+      <Filter>소스 파일\Item\Potion\StaminaPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="CHero.h">
+      <Filter>소스 파일\Hero</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

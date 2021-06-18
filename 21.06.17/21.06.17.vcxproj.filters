@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\hpPotion">
+      <UniqueIdentifier>{ead1986a-51bc-48aa-b747-f74ab6d12998}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\mpPotion">
+      <UniqueIdentifier>{5ba782ce-0548-4730-91eb-7729c2b980dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CPlayer">
+      <UniqueIdentifier>{12a39f2b-d62a-41bb-8610-68befe162472}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Calculater.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CUser.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="hpPotion.cpp">
+      <Filter>소스 파일\hpPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="mpPotion.cpp">
+      <Filter>소스 파일\mpPotion</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>소스 파일\CPlayer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Calculater.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CUser.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="hpPotion.h">
+      <Filter>소스 파일\hpPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="mpPotion.h">
+      <Filter>소스 파일\mpPotion</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>소스 파일\CPlayer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
