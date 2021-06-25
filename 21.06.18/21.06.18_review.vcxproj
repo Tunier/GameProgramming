@@ -143,6 +143,9 @@
     <ClCompile Include="CHero.cpp" />
     <ClCompile Include="Class1.cpp" />
     <ClCompile Include="Class2.cpp" />
+    <ClCompile Include="CMage.cpp" />
+    <ClCompile Include="CMonster.cpp" />
+    <ClCompile Include="CWarrior.cpp" />
     <ClCompile Include="HpPotion.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="main.cpp" />
@@ -155,6 +158,9 @@
     <ClInclude Include="CHero.h" />
     <ClInclude Include="Class1.h" />
     <ClInclude Include="Class2.h" />
+    <ClInclude Include="CMage.h" />
+    <ClInclude Include="CMonster.h" />
+    <ClInclude Include="CWarrior.h" />
     <ClInclude Include="Headers.h" />
     <ClInclude Include="HpPotion.h" />
     <ClInclude Include="Item.h" />

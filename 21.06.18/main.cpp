@@ -1,12 +1,13 @@
 #pragma once
 #include "Headers.h"
 #include "MyPlayer.h"
-#include "HpPotion.h"
+#include "CWarrior.h"
+#include "CMage.h"
+#include "CMonster.h"
 
 void AmStudy()
 {
 	MyPlayer player;
-	HpPotion hPotion;
 
 	while (1)
 	{
@@ -28,6 +29,47 @@ void AmStudy()
 	}
 }
 
+void battle(CHero* hero, CMonster* mon)
+{
+	while (true)
+	{
+		printf("무엇을 하시겠습니까?\n");
+		printf("1)공격 2) 스킬 3)아이템\n");
+		int input; int dam;
+		scanf("%d", &input);
+
+		switch (input)
+		{
+		case 1:
+			dam = hero->Attack();
+			mon->Damaged(dam);
+			break;
+		case 2:
+			dam = hero->Skill(1);
+			mon->Damaged(dam);
+			break;
+		case 3:
+			break;
+		}
+		// 플레이어 턴 종료.
+
+		if (mon->hp <= 0)
+		{
+			hero->LevelUp(mon->exp);
+			return;
+		}
+		// 몬스터가 사망했으면 몬스터의 턴이 진행되지 않고 배틀이 종료됨.	
+
+		int m_dam = mon->Attack();
+		hero->Damaged(m_dam);
+		// 몬스터 턴 종료.
+
+		if (hero->hp <= 0)
+			return;
+	}
+}
+
+
 int main()
 {
 	srand(time(NULL));
@@ -40,8 +82,40 @@ int main()
 	// 한번만 사용해도 다른 클래스에서 사용하는 rand에 영향을 끼치기 때문에
 	// 각 클래스마다 srand를 해줄 필요는 없다.
 
+	char c[256];
+	printf("플레이어의 이름을 입력하세요.\n");
+	scanf(" %s", c);
+
+	printf("플레이어의 직업을 선택하세요.\n1)전사 2)마법사\n");
+	int job;
+	scanf(" %d", &job);
+
+	CHero* hero;
+	CMonster* monster[5];
+	for (int i = 0; i < 5; i++)
+	{
+		monster[i] = new CMonster;
+	}
+
+	if (job == 1)
+		hero = new CWarrior(c);
+	else if (job == 2)
+		hero = new CMage(c);
+	else
+		hero = new CHero;
 
 
+	for (int i = 0; (i < 5) && (hero->hp >= 0); i++)
+	{
+		battle(hero, monster[i]);
+	}
+
+	delete hero;
+	for (int i = 0; i < 5; i++)
+	{
+		delete monster[i];
+	}
+	
 
 	return 0;
 }

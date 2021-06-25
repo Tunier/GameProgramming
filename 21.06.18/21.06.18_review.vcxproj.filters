@@ -40,6 +40,15 @@
     <Filter Include="소스 파일\Hero">
       <UniqueIdentifier>{5cb44f5c-3665-4c6e-8748-4fd514a88b41}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Hero\Warrior">
+      <UniqueIdentifier>{2e566b0d-64a6-49c9-8ab0-7da7364a5f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hero\Mage">
+      <UniqueIdentifier>{a988dd44-02e0-434e-8a77-1c23a5f083c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Monster">
+      <UniqueIdentifier>{e75fbbbe-82b0-4f6e-a42b-48111f083c0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Class1.cpp">
@@ -72,6 +81,15 @@
     <ClCompile Include="CHero.cpp">
       <Filter>소스 파일\Hero</Filter>
     </ClCompile>
+    <ClCompile Include="CMage.cpp">
+      <Filter>소스 파일\Hero\Mage</Filter>
+    </ClCompile>
+    <ClCompile Include="CWarrior.cpp">
+      <Filter>소스 파일\Hero\Warrior</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonster.cpp">
+      <Filter>소스 파일\Monster</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class1.h">
@@ -103,6 +121,15 @@
     </ClInclude>
     <ClInclude Include="CHero.h">
       <Filter>소스 파일\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="CMage.h">
+      <Filter>소스 파일\Hero\Mage</Filter>
+    </ClInclude>
+    <ClInclude Include="CWarrior.h">
+      <Filter>소스 파일\Hero\Warrior</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonster.h">
+      <Filter>소스 파일\Monster</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

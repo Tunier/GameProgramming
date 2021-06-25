@@ -6,21 +6,22 @@ class CHero
 {
 public:
 	CHero();
-	CHero(char name[256]);
+	CHero(char _name[256]);
 
 	char name[256];
 	int level;
 	int str, dex, wis;
 	int hp, mp;
+	int mHp, mMp; // 최대체력, 마력
 	float exp;
 	
 	Item* inventory[5];
 
-	void Info();
-	int Attack();
-	void Damaged(int damage);
-	void Die();
-	void LevelUp();
-	void Skill(int i);
+	virtual void Info();
+	virtual int Attack();
+	virtual void Damaged(int damage);
+	virtual void Die();
+	virtual void LevelUp(int i);
+	virtual int Skill(int i);
 };
 
