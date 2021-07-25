@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\Include">
+      <UniqueIdentifier>{f82ed787-ed5f-4d32-bcf1-177048564127}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. MainUpdate">
+      <UniqueIdentifier>{fb6c0adc-fd12-4cd6-b5bd-8469e6901d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\02. Object">
+      <UniqueIdentifier>{3db7926c-7fa7-4f4a-89cc-eeef19b83cba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\03. Scene">
+      <UniqueIdentifier>{413dec05-e9bf-465c-a394-c5090dc642d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Manager">
+      <UniqueIdentifier>{02a709b0-e548-4454-8710-53bd89043e43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Manager\DoubleBuffer">
+      <UniqueIdentifier>{84005ffa-6293-4ddf-b301-619e3d44b976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Manager\InputManager">
+      <UniqueIdentifier>{1bbe9243-e022-4670-b852-eff2640bccb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Manager\ObjectFactory">
+      <UniqueIdentifier>{9ae47589-693d-4174-8b8c-71efc297298b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\99. Manager\ObjectManager">
+      <UniqueIdentifier>{8126f8c7-8070-48eb-b561-86ecc3049f37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MainUpdate.cpp">
+      <Filter>소스 파일\01. MainUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleBuffer.cpp">
+      <Filter>소스 파일\99. Manager\DoubleBuffer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>헤더 파일\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="MainUpdate.h">
+      <Filter>소스 파일\01. MainUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleBuffer.h">
+      <Filter>소스 파일\99. Manager\DoubleBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="Struct.h">
+      <Filter>헤더 파일\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>헤더 파일\Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
