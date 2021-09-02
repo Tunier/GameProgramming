@@ -111,3 +111,37 @@ DDL - 데이터를 정의하는것 - 데이터베이스를 만들거나 삭제
 
 DCL - 트랙잭션(갱신반영) 제어, 접근 권한 등을 관리
 데이터 제어
+
+INSERT / UPDATE / DELETE  등 데이터에 조작이 가해질 때 승인(Commit)해주는 동작
+
+기본적으로 DBMS 는 자동커밋(Auto Commit)을 활용하고 있음
+그러나 중요한 데이터의 조작이나 동기화 등을 위해서 수동으로 승인할 떄가 존재
+
+이떄 사용하는것이 트랜잭션임
+
+예로 주문과 주문상품 테이블이 존재한다고 가정 하였을 때
+> 주문상품 T는 주문 T에 종속적임
+  = 주문이 없으면 주문상품 테이블에 데이터가 존재할수 없음.
+
+  1. 주문 테이블에 주문 값 추가
+  INSERT INTO 주문T 11:42 << - 상태에서 취소하면 문제가 생김.
+
+  2. 주문테이블에 있는 번호를 토대로 주문상품 테이블에 상품 추가
+  INSERT INTO 주분상품T 토마토 11:42:10
+  INSERT INTO 주분상품T 바나나 11:42:15
+  INSERT INTO 주분상품T 빵 11:43:20
+
+Ex) SELECT * FROM `user`;
+    
+    START TRANSACTION;
+    DELETE FROM user WHERE userId = '1234';
+    INSERT INTO user VALUES('9876','9876','9876');
+    ROLLBACK;
+    
+    SELECT * FROM `user`;
+    
+    START TRANSACTION;
+    DELETE FROM user WHERE userId = '1234';
+    COMMIT;
+    
+    SELECT * FROM `user`;
