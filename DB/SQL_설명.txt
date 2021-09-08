@@ -145,3 +145,11 @@ Ex) SELECT * FROM `user`;
     COMMIT;
     
     SELECT * FROM `user`;
+
+/////////////////////////////////////////////////////
+
+DISTINCT = 중복 제거 가능 : 중복만 날리는것.
+
+GROUP BY = 중복 제거 가능 : 그룹화 하기 때문에 중복데이터가 정리 + 집계함수를 통한 데이터 분리.
+
+SQL 우선순위 WHERE > GROUP BY > HAVING > SELECT > ORDER BY

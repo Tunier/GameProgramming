@@ -1,0 +1,3 @@
+SELECT *, COUNT(OwnersItem) as `소유하고있는 아이템 갯수` FROM `itemowner` WHERE Owner = '0002' GROUP by OwnersItem;
+
+SELECT *, COUNT(OwnersItem) as 갯수 FROM `itemowner` WHERE Owner ='0002'GROUP BY OwnersItem HAVING COUNT(OwnersItem) >= 2;
